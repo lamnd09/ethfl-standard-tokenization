@@ -271,7 +271,7 @@ mongsh <external-ip>:<port>/db -u username
 
 Please copy and paste this link to mongodb compass: 
 
-`mongodb://cotton:K7cW%25%5EGnHesf@a4b468ee807e24911a57c91d63f97878-235541907.ap-southeast-2.elb.amazonaws.com:27017/?authMechanism=DEFAULT&replicaSet=rs0&readPreference=primaryPreferred&directConnection=true`
+`URI`
 
 Credentials: 
 username: cotton
