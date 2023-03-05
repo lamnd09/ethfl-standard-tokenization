@@ -1,0 +1,20 @@
+name: "CI"
+on: # Run the workflows on push/PR to the main branch
+  push:
+    branches: [main,monorepo]
+  pull_request:
+    branches: [main,monorepo]
+
+jobs:
+  lint: # Run lint script for all workspaces
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.15.0"
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run lint script
+        run: npm run lint
